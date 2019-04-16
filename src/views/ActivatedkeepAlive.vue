@@ -6,7 +6,7 @@
     <router-link to="/keepAlive/child1">
       <button>child1</button>
     </router-link>
-    <router-link to="/keepAlive/child2">
+    <router-link to="/keepAlive/child2/2">
       <button>child2</button>
     </router-link>
     <router-link to="/keepAlive/child3">

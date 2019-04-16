@@ -96,21 +96,26 @@ const router = new Router({
           name: 'ActivatedkeepAliveChild1',
           // component: resolve => require(['@/views/ActivatedkeepAliveChild1'], resolve) //vue异步组件
           components: {
-            default: resolve => require(['@/views/ActivatedkeepAliveChild1'], resolve), //es6 提案的import
+            default: resolve => require(['@/views/ActivatedkeepAliveChild1'], resolve),
             left: Left,
             right: Right
-          },
+          }
         },
         {
-          path: 'child2',
+          path: 'child2/:id',
           name: 'ActivatedkeepAliveChild2',
           // component: r => require.ensure([], () => r(require(['@/views/ActivatedkeepAliveChild2'])), 'keepalive') // webpack->require.ensure
-          component: () => import(/* webpackChunkName:'keepalive' */ '@/views/ActivatedkeepAliveChild2')
+          component: () => import(/* webpackChunkName:'keepalive' */ '@/views/ActivatedkeepAliveChild2'),
+          props: true
         },
         {
           path: 'child3',
           name: 'ActivatedkeepAliveChild3',
-          component: () => import(/* webpackChunkName:'keepalive' */ '@/views/ActivatedkeepAliveChild3')
+          component: () => import(/* webpackChunkName:'keepalive' */ '@/views/ActivatedkeepAliveChild3'),
+          // props: {username: 'gp'} 两种方式都可以
+          props: () => {
+            return {username: 'gp'}
+          }
         }
       ]
     },

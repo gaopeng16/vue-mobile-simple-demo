@@ -15,11 +15,13 @@ import 'mint-ui/lib/style.css'
 import VueValidator from 'vue-validator'
 import './assets/iconfont/iconfont.css'
 import Loading from './components/loading/index'
+import mixin from './utils/mixin'
 
 Vue.use(Vuex)
 Vue.use(Mint)
 Vue.use(VueValidator)
 Vue.use(Loading)
+Vue.mixin(mixin)
 
 Vue.config.productionTip = false
 

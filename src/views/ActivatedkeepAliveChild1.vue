@@ -2,7 +2,7 @@
   <div>
     <br>
     <h3>ActivatedkeepAliveChild1</h3>
-    <p>ActivatedkeepAliveChild1 子路由一</p>
+    <p>ActivatedkeepAliveChild1 子路由一 </p>
     <input type="radio">
     <router-view></router-view>
   </div>
